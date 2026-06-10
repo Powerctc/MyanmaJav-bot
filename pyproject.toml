@@ -1,0 +1,13 @@
+[project]
+name = "fotmov-tv-downloader"
+version = "0.1.0"
+description = "FOTMOV TV APK Downloader Bot"
+requires-python = ">=3.9"
+dependencies = [
+    "pyTelegramBotAPI",
+    "requests",
+    "Flask"
+]
+
+[tool.vercel]
+entrypoint = "api.webhook:app"
