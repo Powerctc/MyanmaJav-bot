@@ -27,23 +27,25 @@ def telegram_webhook():
         return 'Invalid JSON', 400
     return "FOTMOV TV Bot Webhook Running!"
 
-# 🌟 1. /start Command
+# 🌟 1. /start Command (Updated)
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     welcome_text = (
         "👋 **မင်္ဂလာပါ သယ်ရင်းရေ...**\n"
-        "🚀 **FOTMOV TV Official APK Downloader Bot** မှ ကြိုဆိုပါတယ်ဗျာ။\n\n"
-        "⚠️ **[အရေးကြီး] အသုံးမပြုမီ အောက်ပါအညွှန်းစာကို သေချာဖတ်ရန် လိုအပ်ပါသည် -**\n"
-        "၁။ ဖုန်းထဲတွင် Version အဟောင်းရှိပါက **Uninstall (ဖျက်ပစ်ရန်)** လိုအပ်ပါသည်။\n"
-        "၂။ အောက်ပါ ဒေါင်းလုဒ်ခလုတ်ကို နှိပ်၍ APK အသစ်ကို ရယူတပ်ဆင်ပါ။\n"
-        "၃။ လိုင်းမငြိမ်ပါက VPN အသုံးပြုပေးပါ။\n\n"
+        "🚀 **FOTMOV TV Official Bot** မှ ကြိုဆိုပါတယ်။\n\n"
+        "📢 **အရေးကြီး:** Main Group ကို join ရန် သူငယ်ချင်း (သို့) Group (၅) ခုသို့ ရှယ်ပေးဖို့ မေတ္တာရပ်ခံပါတယ်ခင်ဗျာ။\n\n"
         "👇 အောက်ပါ ခလုတ်များကို နှိပ်၍ အသုံးပြုနိုင်ပါပြီ -"
     )
-    markup = InlineKeyboardMarkup()
-    markup.add(InlineKeyboardButton("📥 APK File Direct Download", url=APK_DIRECT_URL))
-    markup.add(InlineKeyboardButton("🌐 Visit Official Website", url=WEBSITE_URL))
-    markup.add(InlineKeyboardButton("👥 Admin Group/Channel", url=ADMIN_GROUP_URL),
-               InlineKeyboardButton("👤 Admin FB Account", url=ADMIN_FB_URL))
+    
+    markup = InlineKeyboardMarkup(row_width=1) # ခလုတ်တွေကို တစ်တန်းချင်းစီပေါ်အောင် row_width=1 သုံးထားတယ်
+    
+    markup.add(
+        InlineKeyboardButton("ပိုမိုကြည့်ရှု့ရန် Main Group 👈ကိုjoin ပါ", url="https://t.me/+nRpPeCCewcFhYWRl"),
+        InlineKeyboardButton("Website မှကြည့်ရန်👈နှိပ်ပါ", url="https://shawdowless-xnxxburmese.static.hf.space/Adults.html"),
+        InlineKeyboardButton("Apk Downloader👈နှိပ်ပါ", url="https://t.me/Fotmovdownloader"),
+        InlineKeyboardButton("TikTok video Downloader", url="https://t.me/tknowatermarkdownloader")
+    )
+    
     bot.send_message(message.chat.id, welcome_text, parse_mode="Markdown", reply_markup=markup)
 
 # 🆕 2. New Member Join
