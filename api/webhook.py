@@ -32,7 +32,7 @@ def telegram_webhook():
 def send_welcome(message):
     welcome_text = (
         "👋 **မင်္ဂလာပါ သယ်ရင်းရေ...**\n"
-        "🚀 **FOTMOV TV Official Bot** မှ ကြိုဆိုပါတယ်။\n\n"
+        "🚀 **MyanmaJav Official Bot** မှ ကြိုဆိုပါတယ်။\n\n"
         "📢 **အရေးကြီး:** Main Group ကို join ရန် သူငယ်ချင်း (သို့) Group (၅) ခုသို့ ရှယ်ပေးဖို့ မေတ္တာရပ်ခံပါတယ်ခင်ဗျာ။\n\n"
         "👇 အောက်ပါ ခလုတ်များကို နှိပ်၍ အသုံးပြုနိုင်ပါပြီ -"
     )
