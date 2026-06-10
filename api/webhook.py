@@ -44,6 +44,7 @@ def send_welcome(message):
         InlineKeyboardButton("Website မှကြည့်ရန်👈နှိပ်ပါ", url="https://shawdowless-xnxxburmese.static.hf.space/Adults.html"),
         InlineKeyboardButton("Apk Downloader👈နှိပ်ပါ", url="https://t.me/Fotmovdownloader"),
         InlineKeyboardButton("TikTok video Downloader", url="https://t.me/tknowatermarkdownloader")
+        InlineKeyboardButton("Admin Fb Acc.", url="https://www.facebook.com/share/1D51YRzmjL/")
     )
     
     bot.send_message(message.chat.id, welcome_text, parse_mode="Markdown", reply_markup=markup)
