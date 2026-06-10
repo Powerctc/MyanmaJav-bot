@@ -12,7 +12,7 @@ bot = telebot.TeleBot(BOT_TOKEN, threaded=False)
 APK_DIRECT_URL = "https://t.me/fotmovtv/15"
 WEBSITE_URL = "http://bamarthan.vercel.app/"
 ADMIN_GROUP_URL = "https://t.me/addlist/uO9JW9MOK-ZlM2M9"
-ADMIN_FB_URL = "https://www.facebook.com/share/1GsFpU5pPH/"
+ADMIN_FB_URL = "https://www.facebook.com/share/1D51YRzmjL/"
 
 # Vercel Webhook အတွက် Route နှစ်ခုစလုံးကို အလုပ်လုပ်အောင် ပြင်ဆင်ထားပါသည်
 @app.route('/', methods=['GET', 'POST'])
