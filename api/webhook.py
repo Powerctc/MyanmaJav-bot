@@ -8,12 +8,6 @@ app = Flask(__name__)
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 bot = telebot.TeleBot(BOT_TOKEN, threaded=False)
 
-# လင့်ခ်များ
-APK_DIRECT_URL = "https://t.me/fotmovtv/15"
-WEBSITE_URL = "http://bamarthan.vercel.app/"
-ADMIN_GROUP_URL = "https://t.me/addlist/uO9JW9MOK-ZlM2M9"
-ADMIN_FB_URL = "https://www.facebook.com/share/1D51YRzmjL/"
-
 # Vercel Webhook အတွက် Route နှစ်ခုစလုံးကို အလုပ်လုပ်အောင် ပြင်ဆင်ထားပါသည်
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/api/webhook', methods=['GET', 'POST'])
@@ -27,7 +21,7 @@ def telegram_webhook():
         return 'Invalid JSON', 400
     return "FOTMOV TV Bot Webhook Running!"
 
-# 🌟 1. /start Command (Updated)
+# 🌟 1. /start Command
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     welcome_text = (
@@ -37,15 +31,18 @@ def send_welcome(message):
         "👇 အောက်ပါ ခလုတ်များကို နှိပ်၍ အသုံးပြုနိုင်ပါပြီ -"
     )
     
-    markup = InlineKeyboardMarkup(row_width=1) # ခလုတ်တွေကို တစ်တန်းချင်းစီပေါ်အောင် row_width=1 သုံးထားတယ်
+    markup = InlineKeyboardMarkup(row_width=1)
     
     markup.add(
         InlineKeyboardButton("ပိုမိုကြည့်ရှု့ရန် Main Group 👈ကိုjoin ပါ", url="https://t.me/+nRpPeCCewcFhYWRl"),
         InlineKeyboardButton("Website မှကြည့်ရန်👈နှိပ်ပါ", url="https://shawdowless-xnxxburmese.static.hf.space/Adults.html"),
-        InlineKeyboardButton("Apk Downloader👈နှိပ်ပါ", url="https://t.me/Fotmovdownloader"),
         InlineKeyboardButton("TikTok video Downloader", url="https://t.me/tknowatermarkdownloader"),
-        InlineKeyboardButton("🇯🇵မြန်မာစာတန်းထိုး", url="https://ouo.io/12YBTq"),
-        InlineKeyboardButton("Admin Fb Acc.", url="https://www.facebook.com/share/1D51YRzmjL/")
+        InlineKeyboardButton("🇯🇵စာတန်းထိုး(Browser တခုဖြင့်ကြည့်ပါ", url="https://ouo.io/12YBTq"),
+InlineKeyboardButton("🇯🇵ဆင်ဆာမပါ-Browser တခုဖြင့်ကြည့်ပါ", url="https://ouo.io/BrFapmF"),
+InlineKeyboardButton("🇷🇺ရုရှား-Browser တခုဖြင့်ကြည့်ပါ", url="https://ouo.io/3UTfd7"),
+InlineKeyboardButton("အာရှ-Browser တခုဖြင့်ကြည့်ပါ", url="https://ouo.io/kxRZBL"),
+InlineKeyboardButton("No ad-Apk Downloader👈နှိပ်ပါ", url="https://t.me/Fotmovdownloader"),
+        InlineKeyboardButton("Admin Fb Acc.", url="https://www.facebook.com/share/17cje3nmAV/")
     )
     
     bot.send_message(message.chat.id, welcome_text, parse_mode="Markdown", reply_markup=markup)
