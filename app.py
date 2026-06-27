@@ -34,7 +34,7 @@ def send_welcome(message):
     markup = InlineKeyboardMarkup(row_width=1)
     markup.add(
         InlineKeyboardButton("ပိုမိုကြည့်ရှု့ရန် Main Group 👈ကိုjoin ပါ", url="https://t.me/+nRpPeCCewcFhYWRl"),
-        InlineKeyboardButton("nRpPeCCewcFhYWRlhYWRl BFA ADULTS 👈ကိုjoin ပါ", url="https://bfa-adults-tv.vercel.app/"),
+        InlineKeyboardButton("အမုန်းကြည့် BFA ADULTS 👈ကိုjoin ပါ", url="https://bfa-adults-tv.vercel.app/"),
         InlineKeyboardButton("Website မှကြည့်ရန်👈နှိပ်ပါ", url="https://shawdowless-xnxxburmese.static.hf.space/Adults.html"),
         InlineKeyboardButton("TikTok video Downloader", url="https://t.me/tknowatermarkdownloader"),
         InlineKeyboardButton("🇯🇵စာတန်းထိုး(Browser တခုဖြင့်ကြည့်ပါ)", url="https://ouo.io/12YBTq"),
