@@ -3,12 +3,17 @@ name: Run Burmarjav Bot 24/7
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *' # 5 မိနစ်တစ်ခါ restart
+    - cron: '*/5 * * * *'
+
+# Job အသစ်လာရင် Job အဟောင်းကို ရပ်ပစ်ရန်
+concurrency:
+  group: burmarjav-bot
+  cancel-in-progress: true
 
 jobs:
   bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 350 # 6 နာရီနီးပါး run ခိုင်းထားမယ်
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,3 +24,4 @@ jobs:
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: python app.py
+        
