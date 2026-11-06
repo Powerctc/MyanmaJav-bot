@@ -35,14 +35,27 @@ def send_welcome(message):
     markup.add(
         InlineKeyboardButton("ပိုမိုကြည့်ရှု့ရန် Main Group 👈ကိုjoin ပါ", url="https://t.me/+nRpPeCCewcFhYWRl"),
         InlineKeyboardButton("တဝကြီးကြည့် BFA ADULTS 👈ကိုjoin ပါ", url="https://bfa-adults-tv.vercel.app/"),
-        InlineKeyboardButton("Website မှကြည့်ရန်👈နှိပ်ပါ", url="https://shawdowless-xnxxburmese.static.hf.space/Adults.html"),
         InlineKeyboardButton("TikTok video Downloader", url="https://t.me/tknowatermarkdownloader"),
+        # --- အသစ်ထည့်သွင်းပေးလိုက်သော ချန်နယ်ခလုတ်များ ---
+        InlineKeyboardButton("💧 ရေချိုးသီးသန့် ⬇️💯", url="https://t.me/+xKnTycvfbJA0MWI9"),
+        InlineKeyboardButton("🇲🇲 မြန်မာဟုန်းမိတ်များ ⬇️💯", url="https://t.me/+ZFJO1IxxBk5iMzFl"),
+        InlineKeyboardButton("🇲🇲 မြန်မာသီးသန့်ကြိုက်သူများ ⬇️💯", url="https://t.me/+MOHZpaeMdyYwZWFl"),
+        InlineKeyboardButton("🔥 အထန်မလေးများ ⬇️💯", url="https://t.me/+rqxnuwria18yZjQ1"),
+        InlineKeyboardButton("✨ ကြိုက်သွားစေရမယ် ⬇️💯", url="https://t.me/+SeyYQkidpiZjNzE1"),
+        InlineKeyboardButton("🎬 အောကားအစုံ ⬇️💯", url="https://t.me/+l82tRz19ldE1ZTll"),
+        InlineKeyboardButton("💎 ရှယ်အသန့်လေးများ ⬇️💯", url="https://t.me/+85FXu3_tLlxmMGI1"),
+        InlineKeyboardButton("🇯🇵 ဂျပန်၁၈+အကြမ်းစား ⬇️💯", url="https://t.me/+bNBF65WNkWM3N2E9"),
+        InlineKeyboardButton("🔞 လူကြီးကြိုက်အရှည်အကြမ်းစားများ ⬇️💯", url="https://t.me/+uzrhsVAoSJViYzM1"),
+        InlineKeyboardButton("⚡ လိုရင်းတိုရှင်းကြည့်ချင်သူများ ⬇️💯", url="https://t.me/+OWMzn8kJ0wg4YTU1"),
+        InlineKeyboardButton("🌍 အနောက်သီးသန့်ကြိုက်သူများ ⬇️💯", url="https://t.me/+WoRAIjU0cq1lM2U1"),
+        InlineKeyboardButton("🧚 နတ်သမီးလေးများ ⬇️💯", url="https://t.me/+h3xuMS87TIgyNzll"),
+        # ---------------------------------------------
         InlineKeyboardButton("🇯🇵စာတန်းထိုး(Browser တခုဖြင့်ကြည့်ပါ)", url="https://ouo.io/12YBTq"),
         InlineKeyboardButton("🇯🇵ဆင်ဆာမပါ-Browser တခုဖြင့်ကြည့်ပါ", url="https://ouo.io/BrFapmF"),
         InlineKeyboardButton("🇷🇺ရုရှား-Browser တခုဖြင့်ကြည့်ပါ", url="https://ouo.io/3UTfd7"),
         InlineKeyboardButton("အာရှ-Browser တခုဖြင့်ကြည့်ပါ", url="https://ouo.io/kxRZBL"),
-        InlineKeyboardButton("No ad-Apk Downloader👈နှိပ်ပါ", url="https://t.me/Fotmovdownloader"),
-        InlineKeyboardButton("Admin Fb Acc.", url="https://www.facebook.com/share/17cje3nmAV/")
+        InlineKeyboardButton("No ad-Apk Downloader👈နှိပ်ပါ", url="https://t.me/Maingp_Auto_Reply_bot"),
+        InlineKeyboardButton("Admin Fb Acc.", url="https://www.facebook.com/share/18dK81BN1j/")
     )
     
     bot.send_message(message.chat.id, welcome_text, parse_mode="HTML", reply_markup=markup)
@@ -85,4 +98,4 @@ if __name__ == "__main__":
             logger.error(f"Polling crashed: {e}")
             logger.info("Restarting in 15 seconds...")
             time.sleep(15)
-            
+    
